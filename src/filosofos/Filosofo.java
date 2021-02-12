@@ -126,7 +126,7 @@ public class Filosofo extends Thread {
                 // Suelta el comensal:
                 comensal.soltarComensal(id, log);
                 // Ahora el Filósofo piensa *********************************************************************************************
-                System.out.println("El Filósofo " + (id+1) + " está pensando.");
+                System.out.println("El Filosofo " + (id+1) + " esta pensando.");
                 if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id+1) + " esta pensando.");
                 // El tiempo que tarda el filósofo en pensar, entre 100 y 1000 milisegundos:
                 try {
