@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import logica.Principal;
 
 /**
- * Esta clase contiene la interface gráfica de la aplicación
+ * Esta clase contiene la interface grAfica de la aplicaciOn
  * Hereda de {@link Vista00Generica}
  * Contiene todos los elementos gráficos del programa y los botones
  * que ejecutan el programa.
@@ -26,46 +26,46 @@ public class Vista10Control extends Vista00Generica {
         this.jButton_Finalizar.setEnabled(false);
         
         // Campo de Log y de Info:
-        this.jTextArea_Log.setText("\n Información:"
-                + "\n\n El problema de La Cena de los Filósofos es un clásico de las Ciencias"
-                + "\n de la Computación propuesto por Edsger Dijkstra en 1965, para representar"
-                + "\n el problema de la sincronización de procesos en un Sistema Operativo."
+        this.jTextArea_Log.setText("\n Informacion:"
+                + "\n\n El problema de La Cena de los Filosofos es un clasico de las Ciencias"
+                + "\n de la Computacion propuesto por Edsger Dijkstra en 1965, para representar"
+                + "\n el problema de la sincronizacion de procesos en un Sistema Operativo."
                 + "\n\n\n Enunciado del problema:"
-                + "\n\n Cinco filósofos se sientan alrededor de una mesa y pasan su vida cenando"
-                + "\n y pensando. Cada filósofo tiene un plato de fideos y un tenedor a la derecha"
-                + "\n de su plato. Para comer los fideos son necesarios dos tenedores y cada filósofo"
-                + "\n sólo puede tomar los que están a su derecha e izquierda. Si cualquier filósofo"
-                + "\n toma un tenedor y el otro está ocupado, se quedará esperando, con el tenedor en"
+                + "\n\n Cinco Filosofos se sientan alrededor de una mesa y pasan su vida cenando"
+                + "\n y pensando. Cada filosofo tiene un plato de fideos y un tenedor a la derecha"
+                + "\n de su plato. Para comer los fideos son necesarios dos tenedores y cada filosofo"
+                + "\n solo puede tomar los que estan a su derecha e izquierda. Si cualquier filosofo"
+                + "\n toma un tenedor y el otro esta ocupado, se quedara esperando, con el tenedor en"
                 + "\n la mano, hasta que pueda tomar el otro tenedor, para luego empezar a comer."
-                + "\n\n Si dos filósofos adyacentes intentan tomar el mismo tenedor a una vez, se"
-                + "\n produce una condición de carrera: ambos compiten por tomar el mismo tenedor, y"
+                + "\n\n Si dos Filosofos adyacentes intentan tomar el mismo tenedor a una vez, se"
+                + "\n produce una condicion de carrera: ambos compiten por tomar el mismo tenedor, y"
                 + "\n uno de ellos se queda sin comer."
-                + "\n\n Si todos los filósofos toman el tenedor que está a su derecha al mismo tiempo,"
-                + "\n entonces todos se quedarán esperando eternamente, porque alguien debe liberar"
-                + "\n el tenedor que les falta. Nadie lo hará porque todos se encuentran en la misma"
-                + "\n situación (esperando que alguno deje sus tenedores). Entonces los filósofos se"
-                + "\n morirán de hambre."
+                + "\n\n Si todos los Filosofos toman el tenedor que esta a su derecha al mismo tiempo,"
+                + "\n entonces todos se quedara esperando eternamente, porque alguien debe liberar"
+                + "\n el tenedor que les falta. Nadie lo hara porque todos se encuentran en la misma"
+                + "\n situacion (esperando que alguno deje sus tenedores). Entonces los Filosofos se"
+                + "\n moriran de hambre."
                 + "\n Este bloqueo mutuo se denomina interbloqueo o deadlock."
                 + "\n El problema consiste en encontrar un algoritmo que permita que"
-                + "\n los filósofos nunca se mueran de hambre."
-                + "\n\n\n Solución:"
+                + "\n los Filosofos nunca se mueran de hambre."
+                + "\n\n\n Solucion:"
                 + "\n\n He planteado un algoritmo que corrige los conflitos en la cola de los tenedores:"
-                + "\n Cada vez que un filósofo tiene un tenedor espera un tiempo aleatorio para"
+                + "\n Cada vez que un filosofo tiene un tenedor espera un tiempo aleatorio para"
                 + "\n conseguir el segundo tenedor. Si en ese tiempo no queda libre el segundo tenedor,"
                 + "\n suelta el que tiene y vuelve a ponerse en cola para sus dos tenedores. Si un"
-                + "\n filósofo A suelta un tenedor (porque ha comido o porque ha esperado demasiado"
-                + "\n tiempo con el tenedor en la mano) pero todavía desea comer, vuelve a ponerse en"
-                + "\n cola para ese tenedor. Si el filósofo adyacente B está ya en esa cola de tenedor"
+                + "\n filosofo A suelta un tenedor (porque ha comido o porque ha esperado demasiado"
+                + "\n tiempo con el tenedor en la mano) pero todavia desea comer, vuelve a ponerse en"
+                + "\n cola para ese tenedor. Si el filosofo adyacente B esta ya en esa cola de tenedor"
                 + "\n (tiene hambre) lo toma y si no vuelve a cogerlo A. Es importante que el tiempo"
                 + "\n de espera sea aleatorio o se mantendrá el bloqueo del sistema."
                 + "\n Además hay que crea turnos para las comensales: Un portero para el comedor."
-                + "\n Se indica a los filósofos que abandonen la mesa cuando no tengan hambre y que"
-                + "\n no regresen a ella hasta que vuelvan a estar hambrientos. La misión del portero"
-                + "\n es controlar el número de filósofos en la sala,"
-                + "\n limitando su número a n-1, pues si hay n-1 comensales seguro que al menos uno"
+                + "\n Se indica a los Filosofos que abandonen la mesa cuando no tengan hambre y que"
+                + "\n no regresen a ella hasta que vuelvan a estar hambrientos. La mision del portero"
+                + "\n es controlar el numero de Filosofos en la sala,"
+                + "\n limitando su numero a n-1, pues si hay n-1 comensales seguro que al menos uno"
                 + "\n puede comer con los dos tenedores."
                 + "\n\n\n De esta manera he conseguido un programa en el que la mayor parte del tiempo"
-                + "\n hay dos Filósofos, comiendo y su ejecución se prolonga infinitamente.\n\n\n"
+                + "\n hay dos Filosofos, comiendo y su ejecucion se prolonga infinitamente.\n\n\n"
                 + "\n Pulsa en Iniciar o si quieres antes puedes Crear un log\n\n\n");
         
         // Contadores de Comida:
@@ -75,7 +75,7 @@ public class Vista10Control extends Vista00Generica {
         this.jTextField_Cont04.setText(" 0");
         this.jTextField_Cont05.setText(" 0");
         
-        // Filósofos Configuración inicial:
+        // Filosofos Configuración inicial:
         this.jLabel_Filo01.setOpaque(true);
         this.jLabel_Filo01.setBackground(Color.WHITE);
         this.jLabel_Filo02.setOpaque(true);
@@ -206,23 +206,23 @@ public class Vista10Control extends Vista00Generica {
 
         jLabel_Filo01.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Filo01.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Filo01.setText("Filósofo 01");
+        jLabel_Filo01.setText("filosofo 01");
 
         jLabel_Filo02.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Filo02.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Filo02.setText("Filósofo 02");
+        jLabel_Filo02.setText("filosofo 02");
 
         jLabel_Filo03.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Filo03.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Filo03.setText("Filósofo 03");
+        jLabel_Filo03.setText("filosofo 03");
 
         jLabel_Filo04.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Filo04.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Filo04.setText("Filósofo 04");
+        jLabel_Filo04.setText("filosofo 04");
 
         jLabel_Filo05.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Filo05.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Filo05.setText("Filósofo 05");
+        jLabel_Filo05.setText("filosofo 05");
 
         jLabel_est01.setText("jLabel1");
 
@@ -318,7 +318,7 @@ public class Vista10Control extends Vista00Generica {
         );
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("Código de colores:");
+        jLabel11.setText("Codigo de colores:");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -458,7 +458,7 @@ public class Vista10Control extends Vista00Generica {
             }
         });
 
-        jButton2.setText("Créditos");
+        jButton2.setText("Creditos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -663,7 +663,7 @@ public class Vista10Control extends Vista00Generica {
     private void jButton_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_IniciarActionPerformed
         Filosofo.finalizado = false; // Para poder pausar o reiniciar.
         
-        // Para que no cree un Log si el Checkbox no está selecionado:
+        // Para que no cree un Log si el Checkbox no esta selecionado:
         if (!jCheckBox_Log.isSelected()) jTextArea_Log = null;
         
         // Clase que contiene todos los objetos de la interface y que sera pasada por parámetro a la clase principal

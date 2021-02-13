@@ -9,8 +9,8 @@ import vistas.Vista10Control;
 
 /**
  * Programa 2 de la tarea 02 de PSP de DAM, Problema de la cena de los Filosofos,
- * Se resuelve utilizando un Portero del Comedor con n-1 plazas o turnos en relacion al número
- * de Filósofos y si un filosofo tarda en conseguir el segundo tenedor pierde el turno.
+ * Se resuelve utilizando un Portero del Comedor con n-1 plazas o turnos en relacion al numero
+ * de Filosofos y si un filosofo tarda en conseguir el segundo tenedor pierde el turno.
  * 
  * El programa ejecuta los hilos de forma concurrente mediante monitores.
  * 
@@ -19,7 +19,7 @@ import vistas.Vista10Control;
  * Paquete: {@link logica} contiene todas las clases que tiene la estructura principal del programa.
  * Paquete: {@link filosofos} contiene todas las clases realcionadas con los hilos {@link Filosofo}.
  * y con los recursos {@link Portero_del_Comedor} y con los {@link Tenedor}.
- * Paquete: images contiene todas las imágenes del programa.
+ * Paquete: images contiene todas las imagenes del programa.
  * 
  */
 public class Main {
@@ -29,7 +29,7 @@ public class Main {
      */
     public static void main(String[] args) {
         /**
-         * Clase que crea la interface gráfica del programa y el arranque del mismo:
+         * Clase que crea la interface grafica del programa y el arranque del mismo:
          */
         JFrame v10control=new Vista10Control();
     }

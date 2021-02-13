@@ -70,7 +70,7 @@ public class Clase10Control {
         return jTextArea_Log;
     }
 
-    // Único Setters
+    // Aplico Setters
     public static void setjTextArea_Info(String mensaje) {
         Clase10Control.jTextArea_Log.append(mensaje + "\n");
         Clase10Control.jTextArea_Log.setCaretPosition(Clase10Control.jTextArea_Log.getDocument().getLength()); 

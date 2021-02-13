@@ -11,7 +11,7 @@ import vistas.Clase10Control;
  * Cada tenedor tiene su ID y a cada filosofo le corresponde 2 tenedores concretos.
  */
 public class Tenedor {
-    // Variable para generar números aleatorios:
+    // Variable para generar numeros aleatorios:
     private Random random = new Random();
     // ID del Tenedor
     private int id;
@@ -35,22 +35,22 @@ public class Tenedor {
         while(!libre) 
             this.wait();
         System.out.println("El Filosofo " + (id_f+1) + " coge el tenedor " + (id+1));
-        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface gráfica:
+        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface grafica:
         if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id_f+1) + " coge el tenedor " + (id+1));
         libre = false;
     }
     /**
-     * Monitor para coger el tenedor izquierdo y poder seguir el proceso de ejecución de los filósofos,
-     * Pero si no consigue cogerlo en un tiempo x retornará false y tendra que salir a pensar y no podra comer,
-     * Tendrá que volver a empezar el proceso de comer.
+     * Monitor para coger el tenedor izquierdo y poder seguir el proceso de ejecucion de los filosofos,
+     * Pero si no consigue cogerlo en un tiempo x retornara false y tendra que salir a pensar y no podra comer,
+     * Tendra que volver a empezar el proceso de comer.
      */
     public synchronized boolean cogerTenedorIzqdo(int id_f, Log log) throws InterruptedException{
         while(!libre){
-            this.wait(random.nextInt(1000) + 500); // Sólo espera aleatoriamente entre 0.5 y 1 seg y si no, retorna false
+            this.wait(random.nextInt(1000) + 500); // Solo espera aleatoriamente entre 0.5 y 1 seg y si no, retorna false
             return false;
         } 
         System.out.println("El Filosofo " + (id_f+1) + " coge el tenedor " + (id+1));
-        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface gráfica:
+        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface grafica:
         if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id_f+1) + " coge el tenedor " + (id+1));
         libre = false;
         return true;
@@ -58,14 +58,14 @@ public class Tenedor {
     /**
      * Monitor para soltar un tenedor izquierdo o derecho y salir a pensar.
      * 
-     * @param id_f ID del Filósofo
-     * @param log Clase Log para escribir el log en la interface gráfica
+     * @param id_f ID del Filosofo
+     * @param log Clase Log para escribir el log en la interface grafica
      * @throws InterruptedException Posibles errores
      */
     public synchronized void soltarTenedor(int id_f, Log log) throws InterruptedException {
         libre = true;
         System.out.println("El Filosofo " + (id_f+1) + " suelta el tenedor " + (id+1));
-        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface gráfica:
+        // Siempre se valora si el log es distinto a null, si lo es se ecribe en la interface grafica:
         if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id_f+1) + " suelta el tenedor " + (id+1));
         this.notify();
     }

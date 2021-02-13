@@ -38,7 +38,7 @@ public class Principal {
         
         // Se crea el Array para contener las 5 instancias de Tenedores:
         Tenedor[] tenedor = new Tenedor[5];
-        // Se crea el Array para contener las 5 instancias de Filósofos:
+        // Se crea el Array para contener las 5 instancias de Filosofos:
         Filosofo[] filosofo = new Filosofo[5];
         // Se crea una sola instancia de Portero_del_Comedor:
         Portero_del_Comedor comensal = new Portero_del_Comedor();
@@ -52,17 +52,17 @@ public class Principal {
             tenedor[i] = new Tenedor(i);
         }
         
-        // Se crean las 5 instancias de Filósofos:
+        // Se crean las 5 instancias de Filosofos:
         for(int i=0; i<filosofo.length; i++){
-            /* El filósofo coge el tenedor de la izquierda 
-            *  y el de la derecha se contabiliza con el módulo(%)
+            /* El filosofo coge el tenedor de la izquierda 
+            *  y el de la derecha se contabiliza con el modulo(%)
             *  porque cuando llega a cuatro el siguiente es cero
             */
-            // Ahora al filósofo se le pasa: un ID, un tenedor Dercho, un tenedor Izdo, el comensal, los componentes gráficos correspondientes y un log
+            // Ahora al filosofo se le pasa: un ID, un tenedor Dercho, un tenedor Izdo, el comensal, los componentes graficos correspondientes y un log
             filosofo[i] = new Filosofo(i, tenedor[i], tenedor[(i+1)%5], comensal, jLabel_F[i], jLabel_T[i], jLabel_T[(i+1)%5], log, jTextField_C[i]);
         }
         
-        // Se echa a andar todos los Filósofos:
+        // Se echa a andar todos los Filosofos:
         for(int i=0; i<filosofo.length; i++){
             filosofo[i].setUncaughtExceptionHandler(manejador);
             filosofo[i].start();

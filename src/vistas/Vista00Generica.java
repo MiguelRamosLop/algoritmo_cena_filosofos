@@ -6,16 +6,16 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 /**
- * Esta clase sirve para crear una plantilla para las interfaces gráficas utilizadas 
- * en la aplicación,
+ * Esta clase sirve para crear una plantilla para las interfaces graficas utilizadas 
+ * en la aplicacion,
  * Esta clase hereda de {@link JFrame} ,
- * Todas las interfaces gráficas usadas en la aplicación a su vez heredarán de esta clase.
+ * Todas las interfaces graficas usadas en la aplicacion a su vez heredaron de esta clase.
  */
 public class Vista00Generica extends javax.swing.JFrame  {
     /**
      * Este constructor define las carcterísticas comunes que tienen las interfaces
-     * gráficas usadas en la aplicación
-     * @param title Título de la ventana actual
+     * gráficas usadas en la aplicacion
+     * @param title Titulo de la ventana actual
      * @param icon Icono de la ventana actual
      */
     public Vista00Generica(String title, String icon){

@@ -5,9 +5,9 @@ import vistas.Clase10Control;
 import vistas.Vista10Control;
 
 /**
- * Esta clase escribe un log en la interface gráfica del programa {@link Vista10Control}
- * Recurso compratido por los hilos Filósofos,
- * Se crea una única instancia
+ * Esta clase escribe un log en la interface grafica del programa {@link Vista10Control}
+ * Recurso compratido por los hilos Filosofos,
+ * Se crea una unica instancia
  */
 public class Log {
    /**

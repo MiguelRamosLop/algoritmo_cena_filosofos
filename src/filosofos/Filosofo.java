@@ -85,57 +85,57 @@ public class Filosofo extends Thread {
                         this.jLabel_T_dcha.setBackground(Color.LIGHT_GRAY); // Componente grafico
                     // Como no ha conseguido el Tenedor izquierdo suelta el comensal
                     comensal.soltarComensal(id, log);
-                    // Y ahora el Filósofo piensa *********************
+                    // Y ahora el Filosofo piensa 
                     System.out.println("El Filosofo " + (id+1) + " esta pensando.");
                     if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id+1) + " esta pensando.");
                     try {
-                        // El tiempo que tarda el filósofo en pensar, entre 100 y 1000 milisegundos:
+                        // El tiempo que tarda el filosofo en pensar, entre 100 y 1000 milisegundos:
                         Filosofo.sleep(random.nextInt(1000) + 100);
                     } catch (InterruptedException ex) {
                         System.out.println("Error. Descripcion: " + ex.toString());
                         if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog("\n\n Error. Descripcion: " + ex.toString() + "\n\n");
                     }
-                    // Fin de Ahora el Filósofo piensa *********************
+                    // Fin de Ahora el Filosofo piensa 
                     continue; // Se vuelve a poner en la casilla de salida y volver a obtener el comensal.
                     // -----------------------------------------------------------------------------------------------------------------
                 }
-                    // Si ha conseguido el Tenedor Izquierdo. El filósofo sigue adelante:
-                    this.jLabel_T_izqda.setBackground(Color.BLUE); // Componente gráfico
-                    // Y ahora el Filósofo come =========================================================================================
-                        this.jLabel_F.setBackground(Color.ORANGE); // Componente gráfico
-                        this.jLabel_F.setForeground(Color.BLUE); // Componente gráfico
+                    // Si ha conseguido el Tenedor Izquierdo. El filosofo sigue adelante:
+                    this.jLabel_T_izqda.setBackground(Color.BLUE); // Componente grafico
+                    // Y ahora el Filosofo come =========================================================================================
+                        this.jLabel_F.setBackground(Color.ORANGE); // Componente grafico
+                        this.jLabel_F.setForeground(Color.BLUE); // Componente grafico
                     jTextField_C.setText(" " + (++Clase10Control.filoCount[id])); // Su contador de comidas incrementa una unidad.
                     System.out.println("El Filosofo " + (id+1) + " esta comiendo.");
                     if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id+1) + " esta comiendo.");
-                    // Simular el tiempo que tarda el filósofo en comer, entre 0.5 y 1 segundos:
+                    // Simular el tiempo que tarda el filosofo en comer, entre 0.5 y 1 segundos:
                     try {
                         sleep(random.nextInt(1000) + 500);
                     } catch (InterruptedException ex) {
                         System.out.println("Error. Descripcion: " + ex.toString());
                         if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog("\n\n Error. Descripcion: " + ex.toString() + "\n\n");
-                    } // Fin de Simular el tiempo que tarda el filósofo en comer, entre 0.5 y 1 segundos
-                        this.jLabel_F.setBackground(Color.WHITE); // Componente gráfico
-                        this.jLabel_F.setForeground(Color.BLACK); // Componente gráfico
-                    // Fin de Ahora el Filósofo come ====================================================================================
+                    } // Fin de Simular el tiempo que tarda el filosofo en comer, entre 0.5 y 1 segundos
+                        this.jLabel_F.setBackground(Color.WHITE); // Componente grafico
+                        this.jLabel_F.setForeground(Color.BLACK); // Componente grafico
+                    // Fin de Ahora el Fisolofo come ====================================================================================
                 // Suelta el Tenedor izquierdo:
                 izqda.soltarTenedor(id, log);
-                    this.jLabel_T_izqda.setBackground(Color.LIGHT_GRAY); // Componente gráfico
+                    this.jLabel_T_izqda.setBackground(Color.LIGHT_GRAY); // Componente grafico
                 // Suelta el Tenedor derecho:
                 dcha.soltarTenedor(id, log);
-                    this.jLabel_T_dcha.setBackground(Color.LIGHT_GRAY); // Componente gráfico
+                    this.jLabel_T_dcha.setBackground(Color.LIGHT_GRAY); // Componente grafico
                 // Suelta el comensal:
                 comensal.soltarComensal(id, log);
-                // Ahora el Filósofo piensa *********************************************************************************************
+                // Ahora el Fisolofo piensa *********************************************************************************************
                 System.out.println("El Filosofo " + (id+1) + " esta pensando.");
                 if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id+1) + " esta pensando.");
-                // El tiempo que tarda el filósofo en pensar, entre 100 y 1000 milisegundos:
+                // El tiempo que tarda el Fisolofo en pensar, entre 100 y 1000 milisegundos:
                 try {
                     Filosofo.sleep(random.nextInt(1000) + 100);
                 } catch (InterruptedException ex) {
                     System.out.println("Error. Descripcion: " + ex.toString());
                     if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog("\n\n Error. Descripcion: " + ex.toString() + "\n\n");
                 }
-                // Fin de Ahora el Filósofo piensa **************************************************************************************
+                // Fin de Ahora el Fisolofo piensa **************************************************************************************
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
                 System.err.println("Se ha producido un error. Descripcion: " + ex.toString());
@@ -146,13 +146,13 @@ public class Filosofo extends Thread {
                 }
             } // Fin del try / catch
             
-            if(finalizado){ // Si se ha pulsado el botón en la interface de 'Pausar' (public static boolean finalizado = true):
+            if(finalizado){ // Si se ha pulsado el boton en la interface de 'Pausar' (public static boolean finalizado = true):
                break; // Se sale
             }
             
         }  // Fin de Se repite infinitamente While
 
-        // Se ha pulsado el botón de la interface 'Pausar' (public static boolean finalizado = true):
+        // Se ha pulsado el boton de la interface 'Pausar' (public static boolean finalizado = true):
         System.out.println("La cena ha terminado para todos: El Filosofo " + (id+1) +" se ha puesto a pensar.\n\nPulsar Iniciar para continuar.\n\n");
         try {
             if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" La cena ha terminado para todos: El Filosofo " + (id+1) +" se ha puesto a pensar.\n\n Pulsar Iniciar para continuar.\n\n");

@@ -9,31 +9,31 @@ import vistas.Clase10Control;
 /**
  * Esta clase maneja las excepciones que puedan ser provocadas por la ejecucion de los hilos
  */
-//manejador de excepciones para toda la aplicación
+//manejador de excepciones para toda la aplicacion
 public class ManejadorExcepciones implements Thread.UncaughtExceptionHandler {
-    //implementa el método uncaughtException()
+    //implementa el metodo uncaughtException()
     @Override
     public void uncaughtException(Thread t, Throwable e){
         System.out.printf("Thread que lanza la excepcion: \n", t.getName());
-        //muestra en consola el hilo que produce la exceción
+        //muestra en consola el hilo que produce la excepcion
         e.printStackTrace();
         //muestra en consola la pila de llamadas
         
-        // Añado este código para que los saque en el Log de la interface gráfica
+        // Anado este codigo para que los saque en el Log de la interface grafica
         if (Clase10Control.getjTextArea_Log()!=null) try {
             log.escribirLog("\n Thread que lanza la excepcion: " + t.getName() + "\n");
             log.escribirLog(e.toString() + "\n\n");
         } catch (InterruptedException ex) {
             Logger.getLogger(ManejadorExcepciones.class.getName()).log(Level.SEVERE, null, ex);
         }
-        // Fin Añado este código
+        // Fin Anado este codigo
     }
-    // Añado este código: Un Constructor que recibe la clase Log que es la que escribe en la interface gráfica
+    // Anado este codigo: Un Constructor que recibe la clase Log que es la que escribe en la interface grafica
 
     public ManejadorExcepciones(Log log) {
         this.log = log;
     }
     // Variable que recibe la clase Log
     Log log;
-    // Fin Añado este código
+    // Fin Anado este codigo
 }
