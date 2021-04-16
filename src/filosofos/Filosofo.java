@@ -90,6 +90,8 @@ public class Filosofo extends Thread {
                     if (Clase10Control.getjTextArea_Log()!=null) log.escribirLog(" El Filosofo " + (id+1) + " esta pensando.");
                     try {
                         // El tiempo que tarda el filosofo en pensar, entre 100 y 1000 milisegundos:
+                        // qué pasaría si los filósofos como ocurre en la vida real se les aplica la regla del 3, 3 días sin beber....
+                        // el tiempo que tienes declarado en la línea que viene a continuación no estaría ajustado y no se garantizaría un acceso justo a los recursos
                         Filosofo.sleep(random.nextInt(1000) + 100);
                     } catch (InterruptedException ex) {
                         System.out.println("Error. Descripcion: " + ex.toString());
